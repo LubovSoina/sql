@@ -139,11 +139,11 @@ select
 from isle.isle_eventmaterial em
 group by em.user_id
 ```
-Задаем именя заголовка
+Задаем именя заголовка с помощью **AS**
 ```mysql
 select
        em.user_id,
-       count(em.id) 'количество цифровых следов'
+       count(em.id) as 'количество цифровых следов'
 
 from isle.isle_eventmaterial em
 group by em.user_id
