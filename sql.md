@@ -139,6 +139,28 @@ select
 from isle.isle_eventmaterial em
 group by em.user_id
 ```
+
+Как найти юзеров, у которых количество материалов в сумме больше N?
+
+Если предложение **WHERE** определяет условие для фильтрации строк
+Предложение **HAVING** применяется после группировки для определения аналогичного условие фильтрации группы по значению агрегатной функций.
+
+
+```sql
+select
+       em.user_id,
+       count(em.id)
+
+from isle.isle_eventmaterial em
+
+group by em.user_id
+having        count(em.id) >=100
+```
+
+
+
+
+
 Переименование заголовка с помощью ключевого слова **AS**
 ```mysql
 select
