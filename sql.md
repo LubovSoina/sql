@@ -139,7 +139,7 @@ select
 from isle.isle_eventmaterial em
 group by em.user_id
 ```
-Задаем именя заголовка с помощью **AS**
+Переименование заголовка с помощью ключевого слова **AS**
 ```mysql
 select
        em.user_id,
